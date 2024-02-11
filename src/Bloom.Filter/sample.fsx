@@ -17,3 +17,4 @@ let filter =
 
 let test = System.Text.Encoding.UTF8.GetBytes "Hello, World!!"
 filter |> Filter.contains test
+filter |> Filter.precision

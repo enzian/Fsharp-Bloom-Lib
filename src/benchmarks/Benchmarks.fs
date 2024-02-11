@@ -5,6 +5,7 @@ open BenchmarkDotNet
 open BenchmarkDotNet.Attributes
 open Bloom.Filter
 open BenchmarkDotNet.Columns
+open Experiments
 
 [<MemoryDiagnoser>]
 [<RankColumn>]
@@ -14,14 +15,6 @@ type AppendBenchmark () =
     member val public iterations = 0 with get, set
 
     member val public data = [] with get, set
-
-    // [<GlobalSetup>]
-    // member self.GlobalSetup() =
-    //     printfn "%s" "Global Setup"
-
-    // [<GlobalCleanup>]
-    // member self.GlobalCleanup() =
-    //     printfn "%s" "Global Cleanup"
 
     [<IterationSetup>]
     member self.IterationSetup() =
